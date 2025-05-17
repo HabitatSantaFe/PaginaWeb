@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venta de Casas Santa Fe Querétaro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --azul: #2980b9;
+      --azul-claro: #6dd5fa;
+      --gris: #f4f4f4;
+      --blanco: #fff;
+      --gris-borde: #e3eafc;
+      --sombra: 0 4px 24px rgba(44,62,80,0.10);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--gris);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      color: #222;
+    }
+    /* HEADER FIJO */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: var(--blanco);
+      box-shadow: var(--sombra);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 2.5vw;
+      height: 70px;
+    }
+    .navbar-logo {
+      height: 48px;
+      width: auto;
+      margin-right: 1.5rem;
+    }
+    .navbar-menu {
+      display: flex;
+      gap: 2.2rem;
+      align-items: center;
+    }
+    .navbar-menu a {
+      color: var(--azul);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.08rem;
+      transition: color 0.2s;
+      padding: 0.2rem 0.7rem;
+      border-radius: 6px;
+    }
+    .navbar-menu a:hover, .navbar-menu a.active {
+      background: var(--azul-claro);
+      color: var(--blanco);
+    }
+    /* HERO */
+    .hero {
+      background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding-top: 90px;
+      padding-bottom: 2.5rem;
+    }
+    .hero-logo-bg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 480px;
+      max-width: 90vw;
+      opacity: 0.10;
+      z-index: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+    .hero-title {
+      font-size: 2.7rem;
+      color: var(--azul);
+      font-weight: 900;
+      margin-bottom: 0.7rem;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px #fff;
+    }
+    .hero-sub {
+      font-size: 1.25rem;
+      color: #444;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+    .hero-btn {
+      display: inline-block;
+      padding: 1rem 2.2rem;
+      background: linear-gradient(90deg, var(--azul-claro) 0%, var(--azul) 100%);
+      color: #fff;
+      border-radius: 8px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      margin-top: 0.5rem;
+    }
+    .hero-btn:hover {
+      background: linear-gradient(90deg, var(--azul) 0%, var(--azul-claro) 100%);
+      color: #eaf6fb;
+    }
+    /* GALERÍA DE INTERIORES */
+    .galeria-interiores-marco {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: var(--sombra);
+      border: 2px solid var(--gris-borde);
+      padding: 1.2rem 0.5rem 1.7rem 0.5rem;
+      max-width: 1100px;
+      margin: 2.5rem auto 2.5rem auto;
+      position: relative;
+    }
+    .galeria-label {
+      position: absolute;
+      left: 2rem;
+      top: -1.2rem;
+      background: linear-gradient(90deg, var(--azul-claro) 0%, var(--azul) 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 0.4em 1.2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #e0eafc;
+      letter-spacing: 1px;
+    }
+    .galeria-interiores {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+      margin-top: 0.7rem;
+    }
+    .galeria-interiores img {
+      height: 200px;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(44,62,80,0.10);
+      background: #fff;
+      border: 1.5px solid var(--gris-borde);
+      object-fit: cover;
+      min-width: 260px;
+      max-width: 340px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .galeria-interiores img:hover {
+      transform: scale(1.06) translateY(-8px);
+      box-shadow: 0 8px 24px rgba(44,62,80,0.18);
+    }
+    /* CATÁLOGO DE CASAS */
+    .catalogo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      justify-content: center;
+      padding: 0 1rem 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .casa {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: var(--sombra);
+      width: 330px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s, box-shadow 0.25s;
+      border: 1.5px solid var(--gris-borde);
+      position: relative;
+    }
+    .casa:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 32px rgba(44,62,80,0.18);
+      border-color: var(--azul-claro);
+    }
+    .casa img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+      background: #eaf6fb;
+    }
+    .casa-content {
+      padding: 1.2rem 1.2rem 1rem 1.2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .casa h2 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.3rem;
+      color: var(--azul);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .casa p {
+      margin: 0.5rem 0;
+      color: #444;
+    }
+    .caracteristicas {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0.7rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem 1.2rem;
+      font-size: 1.01rem;
+    }
+    .caracteristicas li {
+      background: #f2f8fd;
+      border-radius: 6px;
+      padding: 0.25rem 0.7rem 0.25rem 0.5rem;
+      color: var(--azul);
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      box-shadow: 0 1px 2px rgba(44,62,80,0.04);
+    }
+    .casa label {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: linear-gradient(90deg, var(--azul-claro) 0%, var(--azul) 100%);
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1.08rem;
+      font-weight: 600;
+      border: none;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+      transition: background 0.2s;
+    }
+    .casa label:hover {
+      background: linear-gradient(90deg, var(--azul) 0%, var(--azul-claro) 100%);
+    }
+    .casa input[type=checkbox] { display: none; }
+    .casa .detalles {
+      display: none;
+      margin-top: 1.1rem;
+      background: #f7fbff;
+      border-radius: 10px;
+      padding: 1rem 1rem 0.7rem 1rem;
+      border: 1px solid var(--gris-borde);
+      color: #333;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.06);
+    }
+    .casa input[type=checkbox]:checked ~ .detalles {
+      display: block;
+      animation: fadeIn 0.4s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .video-container {
+      margin-top: 1rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+      border: 1px solid var(--gris-borde);
+    }
+    /* MÓDULO DE VENTAS Y CITA */
+    .modulo-ventas, .cita-ventas {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: var(--sombra);
+      max-width: 700px;
+      margin: 2.5rem auto 2rem auto;
+      padding: 2rem 1.5rem 2.5rem 1.5rem;
+      text-align: center;
+      border: 1.5px solid var(--gris-borde);
+    }
+    .modulo-ventas h2, .cita-ventas h2 {
+      color: var(--azul);
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: 1px;
+    }
+    .modulo-ventas .modulo-img {
+      max-width: 95%;
+      max-height: 260px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(44,62,80,0.10);
+      margin-bottom: 1.2rem;
+      background: #fff;
+      border: 1px solid var(--gris-borde);
+    }
+    .modulo-ventas p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 1.2rem;
+    }
+    .btn-maps {
+      display: inline-block;
+      padding: 0.8rem 1.7rem;
+      background: linear-gradient(90deg, var(--azul-claro) 0%, var(--azul) 100%);
+      color: #fff;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+      transition: background 0.2s, color 0.2s;
+      margin-top: 0.5rem;
+    }
+    .btn-maps:hover {
+      background: linear-gradient(90deg, var(--azul) 0%, var(--azul-claro) 100%);
+      color: #eaf6fb;
+    }
+    /* FORMULARIO CITA */
+    .cita-ventas h2 { margin-bottom: 1.2rem; }
+    .form-cita {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      align-items: center;
+    }
+    .form-row {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+      justify-content: center;
+    }
+    .form-cita input, .form-cita select {
+      padding: 0.7rem 1rem;
+      border-radius: 6px;
+      border: 1.5px solid #b3c6e0;
+      font-size: 1.05rem;
+      width: 180px;
+      background: #f7fbff;
+      transition: border 0.2s;
+    }
+    .form-cita input:focus, .form-cita select:focus {
+      border: 1.5px solid var(--azul);
+      outline: none;
+    }
+    .btn-cita {
+      padding: 0.8rem 2.2rem;
+      background: linear-gradient(90deg, var(--azul-claro) 0%, var(--azul) 100%);
+      color: #fff;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      margin-top: 0.5rem;
+    }
+    .btn-cita:hover {
+      background: linear-gradient(90deg, var(--azul) 0%, var(--azul-claro) 100%);
+      color: #eaf6fb;
+    }
+    /* FOOTER */
+    footer {
+      background: var(--azul);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem 1.2rem 1rem;
+      font-size: 1.05rem;
+      margin-top: 3rem;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+      box-shadow: 0 -2px 12px rgba(44,62,80,0.10);
+    }
+    .footer-contacto {
+      margin-bottom: 0.7rem;
+      font-size: 1.1rem;
+    }
+    .footer-redes {
+      margin-bottom: 0.7rem;
+    }
+    .footer-redes a {
+      color: #fff;
+      margin: 0 0.7rem;
+      font-size: 1.3rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-redes a:hover { color: var(--azul-claro); }
+    @media (max-width: 900px) {
+      .hero-title { font-size: 1.7rem; }
+      .hero-logo-bg { width: 220px; }
+      .galeria-interiores img { height: 120px; min-width: 120px; max-width: 180px; }
+      .catalogo { gap: 1.2rem; }
+      .casa { width: 95vw; max-width: 370px; }
+    }
+    @media (max-width: 700px) {
+      .navbar { flex-direction: column; height: auto; padding: 0.5rem 1vw; }
+      .navbar-menu { gap: 1rem; }
+      .hero-title { font-size: 1.1rem; }
+      .galeria-interiores img { height: 90px; min-width: 90px; max-width: 120px; }
+      .galeria-label { left: 1rem; font-size: 0.95rem; }
+      .casa { width: 98vw; max-width: 99vw; }
+      .casa-content { padding: 1rem 0.5rem 1rem 0.5rem; }
+      .form-row { flex-direction: column; gap: 0.7rem; align-items: center; }
+      .form-cita input, .form-cita select { width: 95vw; max-width: 99vw; }
+    }
+    /* COLLAGE ARTÍSTICO DE INTERIORES */
+    .collage-interiores {
+      max-width: 1100px;
+      margin: 2.5rem auto 2.5rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+    .collage-title {
+      font-size: 2.2rem;
+      color: #2980b9;
+      font-weight: 800;
+      margin-bottom: 0.7rem;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #fff;
+    }
+    .collage-motiva {
+      font-size: 1.18rem;
+      color: #1a4e7a;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      background: #eaf6fb;
+      border-radius: 10px;
+      display: inline-block;
+      padding: 0.7em 1.5em;
+      box-shadow: 0 2px 8px #e0eafc;
+    }
+    .collage-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 160px 120px 160px;
+      gap: 1.1rem;
+      position: relative;
+      justify-items: center;
+      align-items: center;
+    }
+    .collage-img {
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(44,62,80,0.13);
+      border: 2px solid #e3eafc;
+      object-fit: cover;
+      background: #fff;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+    }
+    .collage-img:hover {
+      transform: scale(1.06) translateY(-8px);
+      box-shadow: 0 8px 24px rgba(44,62,80,0.18);
+      z-index: 2;
+    }
+    .img1 { grid-column: 1 / span 2; grid-row: 1 / span 2; }
+    .img2 { grid-column: 3 / span 1; grid-row: 1 / span 1; }
+    .img3 { grid-column: 4 / span 2; grid-row: 1 / span 2; }
+    .img4 { grid-column: 2 / span 1; grid-row: 2 / span 2; }
+    .img5 { grid-column: 3 / span 1; grid-row: 2 / span 1; }
+    .img6 { grid-column: 5 / span 1; grid-row: 2 / span 2; }
+    .img7 { grid-column: 1 / span 1; grid-row: 3 / span 1; }
+    .img8 { grid-column: 2 / span 1; grid-row: 3 / span 1; }
+    .img9 { grid-column: 3 / span 1; grid-row: 3 / span 1; }
+    .img10 { grid-column: 4 / span 1; grid-row: 3 / span 1; }
+    @media (max-width: 900px) {
+      .collage-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 180px 140px 180px 140px 180px;
+      }
+      .collage-img {
+        height: 180px !important;
+        min-height: 140px;
+      }
+      .img1 { grid-column: 1 / span 2; grid-row: 1 / span 2; }
+      .img2 { grid-column: 3 / span 1; grid-row: 1 / span 1; }
+      .img3 { grid-column: 1 / span 2; grid-row: 3 / span 2; }
+      .img4 { grid-column: 3 / span 1; grid-row: 2 / span 2; }
+      .img5 { grid-column: 1 / span 1; grid-row: 5 / span 1; }
+      .img6 { grid-column: 2 / span 1; grid-row: 5 / span 1; }
+      .img7 { grid-column: 3 / span 1; grid-row: 5 / span 1; }
+      .img8, .img9, .img10 { display: none; }
+    }
+    @media (max-width: 600px) {
+      .collage-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 150px 120px 150px 120px 150px 120px 150px 120px 150px 120px;
+        gap: 0.7rem;
+      }
+      .collage-img {
+        height: 150px !important;
+        min-height: 120px;
+      }
+      .img1 { grid-column: 1 / span 2; grid-row: 1 / span 1; }
+      .img2 { grid-column: 1 / span 2; grid-row: 2 / span 1; }
+      .img3 { grid-column: 1 / span 2; grid-row: 3 / span 1; }
+      .img4 { grid-column: 1 / span 2; grid-row: 4 / span 1; }
+      .img5 { grid-column: 1 / span 2; grid-row: 5 / span 1; }
+      .img6 { grid-column: 1 / span 2; grid-row: 6 / span 1; }
+      .img7 { grid-column: 1 / span 2; grid-row: 7 / span 1; }
+      .img8 { grid-column: 1 / span 2; grid-row: 8 / span 1; }
+      .img9 { grid-column: 1 / span 2; grid-row: 9 / span 1; }
+      .img10 { grid-column: 1 / span 2; grid-row: 10 / span 1; }
+    }
+    .separador-seccion {
+      width: 100%;
+      background: linear-gradient(90deg, #e0eafc 0%, #cfdef3 100%);
+      padding: 2.2rem 0 1.2rem 0;
+      text-align: center;
+      margin: 0 auto 0 auto;
+      border-top: 2px solid #e3eafc;
+      border-bottom: 2px solid #e3eafc;
+    }
+    .separador-titulo {
+      font-size: 2.1rem;
+      color: #2980b9;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #fff;
+      background: #fff;
+      border-radius: 12px;
+      padding: 0.5em 2em;
+      box-shadow: 0 2px 8px #e0eafc;
+      display: inline-block;
+    }
+    @media (max-width: 700px) {
+      .separador-titulo { font-size: 1.2rem; padding: 0.5em 0.7em; }
+      .separador-seccion { padding: 1.2rem 0 0.7rem 0; }
+    }
+    .navbar-title {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #2980b9;
+      letter-spacing: 1px;
+      margin-right: 2rem;
+      text-shadow: 0 2px 8px #fff;
+    }
+    .navbar-logo-right {
+      max-width: 110px;
+      max-height: 60px;
+      margin-left: 2rem;
+      margin-right: 0;
+      box-shadow: 0 2px 12px rgba(44,62,80,0.10);
+      background: #fff;
+      border-radius: 16px;
+      padding: 0.3rem 1.2rem;
+      display: block;
+    }
+    .whatsapp-float {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 9999;
+      background: #25d366;
+      border-radius: 50%;
+      box-shadow: 0 4px 16px rgba(44,62,80,0.18);
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .whatsapp-float:hover {
+      box-shadow: 0 8px 32px rgba(44,62,80,0.25);
+      transform: scale(1.08);
+    }
+    .whatsapp-float img {
+      width: 48px;
+      height: 48px;
+      display: block;
+    }
+    @media (max-width: 700px) {
+      .navbar-title { font-size: 1.1rem; margin-right: 0.7rem; }
+      .navbar-logo-right { max-width: 70px; max-height: 40px; margin-left: 0.7rem; }
+      .whatsapp-float img { width: 38px; height: 38px; }
+      .whatsapp-float { right: 10px; bottom: 10px; }
+    }
+    .footer-icon-link {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+    }
+    .footer-icon-link:hover {
+      color: var(--azul-claro);
+    }
+    .btn-descarga-catalogo {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.8rem 2.2rem;
+      background: linear-gradient(90deg, #6dd5fa 0%, #2980b9 100%);
+      color: #fff;
+      border-radius: 8px;
+      font-size: 1.13rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      margin-left: 1.5rem;
+      vertical-align: middle;
+    }
+    .btn-descarga-catalogo:hover {
+      background: linear-gradient(90deg, #2980b9 0%, #6dd5fa 100%);
+      color: #eaf6fb;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-title">Habitat Santa Fe</div>
+    <div class="navbar-menu">
+      <a href="#hero" class="active">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#modulo">Ubicación</a>
+      <a href="#cita">Cita</a>
+    </div>
+    <img src="Logo.jpg" alt="Logo" class="navbar-logo navbar-logo-right">
+  </nav>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <img src="Logo.jpg" alt="Logo de fondo" class="hero-logo-bg">
+    <div class="hero-content">
+      <h1 class="hero-title">Venta de Casas en <span>Santa Fe, Querétaro</span></h1>
+      <p class="hero-sub">¡Bienvenido a Habitat Santa Fe! Vive en el mejor desarrollo residencial, descubre tu nuevo hogar con acabados de lujo y espacios únicos.</p>
+      <a href="#catalogo" class="hero-btn">Ver Catálogo</a>
+    </div>
+  </section>
+  <!-- COLLAGE ARTÍSTICO DE INTERIORES -->
+  <section class="collage-interiores">
+    <h2 class="collage-title">Espacios Interiores Habitat Santa Fe</h2>
+    <div class="collage-motiva">¡Haz realidad tu sueño de vivir en Querétaro con Habitat Santa Fe! Descubre el confort, la seguridad y la plusvalía que solo nuestro desarrollo puede ofrecerte.</div>
+    <div class="collage-grid">
+      <img src="C:\Users\beatr\OneDrive\Escritorio\Venta de Casas\Interior\1.jpg" alt="Interior 1" class="collage-img img1">
+      <img src="C:\Users\beatr\OneDrive\Escritorio\Venta de Casas\Interior\2.jpg" alt="Interior 2" class="collage-img img2">
+      <img src="C:\Users\beatr\OneDrive\Escritorio\Venta de Casas\Interior\3.jpg" alt="Interior 3" class="collage-img img3">
+      <img src="C:\Users\beatr\OneDrive\Escritorio\Venta de Casas\Interior\4.jpg" alt="Interior 4" class="collage-img img4">
+      <img src="C:\Users\beatr\OneDrive\Escritorio\Venta de Casas\Interior\6.jpg" alt="Interior 5" class="collage-img img5">
+      <img src="C:\Users\beatr\OneDrive\Escritorio\Venta de Casas\Interior\7.jpg" alt="Interior 6" class="collage-img img6">
+      <img src="C:\Users\beatr\OneDrive\Escritorio\Venta de Casas\Interior\11.jpg" alt="Interior 7" class="collage-img img7">
+      <img src="C:\Users\beatr\OneDrive\Escritorio\Venta de Casas\Interior\23.png" alt="Interior 8" class="collage-img img8">
+      <img src="C:\Users\beatr\OneDrive\Escritorio\Venta de Casas\Interior\67.png" alt="Interior 9" class="collage-img img9">
+      <img src="C:\Users\beatr\OneDrive\Escritorio\Venta de Casas\Interior\89.png" alt="Interior 10" class="collage-img img10">
+      <img src="C:\Users\beatr\OneDrive\Escritorio\Venta de Casas\Interior\200.jpg" alt="Interior 9" class="collage-img img9">
+      <img src="C:\Users\beatr\OneDrive\Escritorio\Venta de Casas\Interior\1000.jpg" alt="Interior 10" class="collage-img img10">
+    </div>
+  </section>
+  <div class="separador-seccion">
+    <span class="separador-titulo">Modelos de casas disponibles en Habitat Santa Fe</span>
+    <a href="catalogo.pdf" download class="btn-descarga-catalogo">Descargar catálogo en PDF</a>
+  </div>
+  <main>
+    <div class="catalogo" id="catalogo">
+      <!-- CASA 1 -->
+      <div class="casa">
+        <img src="C:\Users\beatr\CascadeProjects\habitat\static\fachadas\conmoran.png" alt="Commoran Balcón">
+        <div class="casa-content">
+          <h2>Commoran Balcón</h2>
+          <p><strong>Precio:</strong> $2,850,000</p>
+          <ul class="caracteristicas">
+            <li>Habitaciones: 3</li>
+            <li>Baños: 3</li>
+            <li>Cochera: 3</li>
+            <li>Jardín: 54 m²</li>
+            <li>Terreno: 180 m²</li>
+            <li>Construcción: 153 m²</li>
+          </ul>
+          <input type="checkbox" id="detalles1">
+          <label for="detalles1">Ver más</label>
+          <div class="detalles">
+            <p>Terreno: 180 m², Construcción: 153 m², 3 habitaciones, 3 baños, Estudio: No, Jardín: 54 m², Cochera: 3, Materiales: Tabiquería, Roof Garden: No.</p>
+            <div class="video-container">
+              <iframe width="100%" height="220" src="https://www.youtube.com/embed/VXgAtYsGVpw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASA 2 -->
+      <div class="casa">
+        <img src="C:\Users\beatr\CascadeProjects\habitat\static\fachadas\preiser.jpg" alt="Preiser (sin Roof Garden)">
+        <div class="casa-content">
+          <h2>Preiser (sin Roof Garden)</h2>
+          <p><strong>Precio:</strong> $3,000,000</p>
+          <ul class="caracteristicas">
+            <li>Habitaciones: 3</li>
+            <li>Baños: 2.5</li>
+            <li>Cochera: 3</li>
+            <li>Jardín: 35 m²</li>
+            <li>Terreno: 180 m²</li>
+            <li>Construcción: 165 m²</li>
+          </ul>
+          <input type="checkbox" id="detalles2">
+          <label for="detalles2">Ver más</label>
+          <div class="detalles">
+            <p>Terreno: 180 m², Construcción: 165 m², 3 habitaciones, 2.5 baños, Estudio: No, Jardín: 35 m², Cochera: 3, Materiales: Tabiquería, Roof Garden: No.</p>
+            <div class="video-container">
+              <iframe width="100%" height="220" src="https://www.youtube.com/embed/K2xEG9GGapl" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASA 3 -->
+      <div class="casa">
+        <img src="C:\Users\beatr\CascadeProjects\habitat\static\fachadas\preiser.jpg" alt="Preiser (con Roof Garden)">
+        <div class="casa-content">
+          <h2>Preiser (con Roof Garden)</h2>
+          <p><strong>Precio:</strong> $3,320,000</p>
+          <ul class="caracteristicas">
+            <li>Habitaciones: 3</li>
+            <li>Baños: 2.5</li>
+            <li>Cochera: 3</li>
+            <li>Jardín: 35 m²</li>
+            <li>Terreno: 180 m²</li>
+            <li>Construcción: 173.7 m²</li>
+          </ul>
+          <input type="checkbox" id="detalles3">
+          <label for="detalles3">Ver más</label>
+          <div class="detalles">
+            <p>Terreno: 180 m², Construcción: 173.7 m², 3 habitaciones, 2.5 baños, Estudio: No, Jardín: 35 m², Cochera: 3, Materiales: Tabiquería, Roof Garden: Sí.</p>
+            <div class="video-container">
+              <iframe width="100%" height="220" src="https://www.youtube.com/embed/yyy73tbgJ2E" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASA 4 -->
+      <div class="casa">
+        <img src="C:\Users\beatr\CascadeProjects\habitat\static\fachadas\hoatzin.png" alt="Hoatzin">
+        <div class="casa-content">
+          <h2>Hoatzin</h2>
+          <p><strong>Precio:</strong> $3,000,000</p>
+          <ul class="caracteristicas">
+            <li>Habitaciones: 3</li>
+            <li>Baños: 3</li>
+            <li>Cochera: 3</li>
+            <li>Jardín: N/A</li>
+            <li>Terreno: 162.5 m²</li>
+            <li>Construcción: 166 m²</li>
+          </ul>
+          <input type="checkbox" id="detalles4">
+          <label for="detalles4">Ver más</label>
+          <div class="detalles">
+            <p>Terreno: 162.5 m², Construcción: 166 m², 3 habitaciones, 3 baños, Estudio: No, Jardín: N/A, Cochera: 3, Materiales: Tabicón, Roof Garden: No.</p>
+            <div class="video-container">
+              <iframe width="100%" height="220" src="https://www.youtube.com/embed/LkPF-ZxKYRc" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASA 5 -->
+      <div class="casa">
+        <img src="C:\Users\beatr\CascadeProjects\habitat\static\fachadas\sastresillo.jpg" alt="Sastresillo">
+        <div class="casa-content">
+          <h2>Sastresillo</h2>
+          <p><strong>Precio:</strong> $3,200,000</p>
+          <ul class="caracteristicas">
+            <li>Habitaciones: 3</li>
+            <li>Baños: 2</li>
+            <li>Cochera: 3</li>
+            <li>Jardín: N/A</li>
+            <li>Terreno: 180 m²</li>
+            <li>Construcción: 176 m²</li>
+          </ul>
+          <input type="checkbox" id="detalles5">
+          <label for="detalles5">Ver más</label>
+          <div class="detalles">
+            <p>Terreno: 180 m², Construcción: 176 m², 3 habitaciones, 2 baños, Estudio: Sí, Jardín: N/A, Cochera: 3, Materiales: Tabiquería, Roof Garden: No.</p>
+            <div class="video-container">
+              <iframe width="100%" height="220" src="https://www.youtube.com/embed/8AtSU30dW4k" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASA 6 -->
+      <div class="casa">
+        <img src="C:\Users\beatr\CascadeProjects\habitat\static\fachadas\condor.png" alt="Condor">
+        <div class="casa-content">
+          <h2>Condor</h2>
+          <p><strong>Precio:</strong> $3,200,000</p>
+          <ul class="caracteristicas">
+            <li>Habitaciones: 3</li>
+            <li>Baños: 3</li>
+            <li>Cochera: 3</li>
+            <li>Jardín: N/A</li>
+            <li>Terreno: 180 m²</li>
+            <li>Construcción: 175 m²</li>
+          </ul>
+          <input type="checkbox" id="detalles6">
+          <label for="detalles6">Ver más</label>
+          <div class="detalles">
+            <p>Terreno: 180 m², Construcción: 175 m², 3 habitaciones, 3 baños, Estudio: No, Jardín: N/A, Cochera: 3, Materiales: Tabiquería, Roof Garden: No.</p>
+            <div class="video-container">
+              <iframe width="100%" height="220" src="https://www.youtube.com/embed/UPMa5LZUnaA" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASA 7 -->
+      <div class="casa">
+        <img src="C:\Users\beatr\CascadeProjects\habitat\static\fachadas\chapangris.png" alt="Chapan Gris">
+        <div class="casa-content">
+          <h2>Chapan Gris</h2>
+          <p><strong>Precio:</strong> $3,200,000</p>
+          <ul class="caracteristicas">
+            <li>Habitaciones: 3</li>
+            <li>Baños: 3</li>
+            <li>Cochera: 3</li>
+            <li>Jardín: 36 m²</li>
+            <li>Terreno: 180 m²</li>
+            <li>Construcción: 177 m²</li>
+          </ul>
+          <input type="checkbox" id="detalles7">
+          <label for="detalles7">Ver más</label>
+          <div class="detalles">
+            <p>Terreno: 180 m², Construcción: 177 m², 3 habitaciones, 3 baños, Estudio: Sí, Jardín: 36 m², Cochera: 3, Materiales: Tabicón, Roof Garden: No.</p>
+            <div class="video-container">
+              <iframe width="100%" height="220" src="https://www.youtube.com/embed/nLOehFPs7BA" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASA 8 -->
+      <div class="casa">
+        <img src="C:\Users\beatr\CascadeProjects\habitat\static\fachadas\medem.png" alt="Medem">
+        <div class="casa-content">
+          <h2>Medem</h2>
+          <p><strong>Precio:</strong> $3,200,000</p>
+          <ul class="caracteristicas">
+            <li>Habitaciones: 3</li>
+            <li>Baños: 3</li>
+            <li>Cochera: 3</li>
+            <li>Jardín: N/A</li>
+            <li>Terreno: 180 m²</li>
+            <li>Construcción: 175 m²</li>
+          </ul>
+          <input type="checkbox" id="detalles8">
+          <label for="detalles8">Ver más</label>
+          <div class="detalles">
+            <p>Terreno: 180 m², Construcción: 175 m², 3 habitaciones, 3 baños, Estudio: Sí, Jardín: N/A, Cochera: 3, Materiales: Tabiquería, Roof Garden: No.</p>
+            <div class="video-container">
+              <iframe width="100%" height="220" src="https://www.youtube.com/embed/cPMvGWVgrRk" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASA 9 -->
+      <div class="casa">
+        <img src="C:\Users\beatr\CascadeProjects\habitat\static\fachadas\mixto.jpg" alt="Mixto (Vivienda y negocio)">
+        <div class="casa-content">
+          <h2>Mixto (Vivienda y negocio)</h2>
+          <p><strong>Precio:</strong> $3,400,000</p>
+          <ul class="caracteristicas">
+            <li>Habitaciones: 3</li>
+            <li>Baños: 3</li>
+            <li>Cochera: 3</li>
+            <li>Jardín: N/A</li>
+            <li>Terreno: 180 m²</li>
+            <li>Construcción: 180 m²</li>
+          </ul>
+          <input type="checkbox" id="detalles9">
+          <label for="detalles9">Ver más</label>
+          <div class="detalles">
+            <p>Terreno: 180 m², Construcción: 180 m², 3 habitaciones, 3 baños, Estudio: Sí, Jardín: N/A, Cochera: 3, Materiales: Tabicón, Roof Garden: No.</p>
+            <div class="video-container">
+              <iframe width="100%" height="220" src="https://www.youtube.com/embed/XuHihkUqm7M" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASA 10 -->
+      <div class="casa">
+        <img src="C:\Users\beatr\CascadeProjects\habitat\static\fachadas\sirisi.png" alt="Sirisi">
+        <div class="casa-content">
+          <h2>Sirisi</h2>
+          <p><strong>Precio:</strong> $2,850,000</p>
+          <ul class="caracteristicas">
+            <li>Habitaciones: 3</li>
+            <li>Baños: 2.5</li>
+            <li>Cochera: 3</li>
+            <li>Jardín: 36 m²</li>
+            <li>Terreno: 180 m²</li>
+            <li>Construcción: 140 m²</li>
+          </ul>
+          <input type="checkbox" id="detalles10">
+          <label for="detalles10">Ver más</label>
+          <div class="detalles">
+            <p>Terreno: 180 m², Construcción: 140 m², 3 habitaciones, 2.5 baños, Estudio: No, Jardín: 36 m², Cochera: 3, Materiales: Tabiquería, Roof Garden: No.</p>
+            <div class="video-container">
+              <iframe width="100%" height="220" src="https://www.youtube.com/embed/tLc7tEpmizM" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASA 11 -->
+      <div class="casa">
+        <img src="C:\Users\beatr\CascadeProjects\habitat\static\fachadas\sirisiconexcedente.png" alt="Sirisi con Excedente">
+        <div class="casa-content">
+          <h2>Sirisi con Excedente</h2>
+          <p><strong>Precio:</strong> $3,050,000</p>
+          <ul class="caracteristicas">
+            <li>Habitaciones: 3</li>
+            <li>Baños: 2.5</li>
+            <li>Cochera: 3</li>
+            <li>Jardín: 36 m²</li>
+            <li>Terreno: 225 m²</li>
+            <li>Construcción: 153 m²</li>
+          </ul>
+          <input type="checkbox" id="detalles11">
+          <label for="detalles11">Ver más</label>
+          <div class="detalles">
+            <p>Terreno: 225 m², Construcción: 153 m², 3 habitaciones, 2.5 baños, Estudio: No, Jardín: 36 m², Cochera: 3, Materiales: Tabiquería, Roof Garden: No.</p>
+            <div class="video-container">
+              <iframe width="100%" height="220" src="https://www.youtube.com/embed/yyy73tbgJ2E" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASA 12 -->
+      <div class="casa">
+        <img src="C:\Users\beatr\CascadeProjects\habitat\static\fachadas\condorgris.png" alt="Condor Gris">
+        <div class="casa-content">
+          <h2>Condor Gris</h2>
+          <p><strong>Precio:</strong> $3,995,000</p>
+          <ul class="caracteristicas">
+            <li>Habitaciones: 4</li>
+            <li>Baños: 4</li>
+            <li>Cochera: 3</li>
+            <li>Jardín: N/A</li>
+            <li>Terreno: 225 m²</li>
+            <li>Construcción: 180 m²</li>
+          </ul>
+          <input type="checkbox" id="detalles12">
+          <label for="detalles12">Ver más</label>
+          <div class="detalles">
+            <p>Terreno: 225 m², Construcción: 180 m², 4 habitaciones, 4 baños, Estudio: No, Jardín: N/A, Cochera: 3, Materiales: Tabicón, Roof Garden: No.</p>
+            <div class="video-container">
+              <iframe width="100%" height="220" src="https://www.youtube.com/embed/UPMa5LZUnaA" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASA 13 -->
+      <div class="casa">
+        <img src="C:\Users\beatr\CascadeProjects\habitat\static\fachadas\sastrecillo con excedente.png" alt="Sastresillo con Excedente">
+        <div class="casa-content">
+          <h2>Sastresillo con Excedente</h2>
+          <p><strong>Precio:</strong> $3,655,000</p>
+          <ul class="caracteristicas">
+            <li>Habitaciones: 3</li>
+            <li>Baños: 4</li>
+            <li>Cochera: 3</li>
+            <li>Jardín: 80 m²</li>
+            <li>Terreno: 252 m²</li>
+            <li>Construcción: 180 m²</li>
+          </ul>
+          <input type="checkbox" id="detalles13">
+          <label for="detalles13">Ver más</label>
+          <div class="detalles">
+            <p>Terreno: 252 m², Construcción: 180 m², 3 habitaciones, 4 baños, Estudio: No, Jardín: 80 m², Cochera: 3, Materiales: Tabiquería, Roof Garden: No.</p>
+            <div class="video-container">
+              <iframe width="100%" height="220" src="https://www.youtube.com/embed/cPMvGWVgrRk" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASA 14 -->
+      <div class="casa">
+        <img src="C:\Users\beatr\CascadeProjects\habitat\static\fachadas\chapanbeige.png" alt="Chapan Beige">
+        <div class="casa-content">
+          <h2>Chapan Beige</h2>
+          <p><strong>Precio:</strong> $3,850,000</p>
+          <ul class="caracteristicas">
+            <li>Habitaciones: 4</li>
+            <li>Baños: 4</li>
+            <li>Cochera: 3</li>
+            <li>Jardín: N/A</li>
+            <li>Terreno: 180 m²</li>
+            <li>Construcción: 220 m²</li>
+          </ul>
+          <input type="checkbox" id="detalles14">
+          <label for="detalles14">Ver más</label>
+          <div class="detalles">
+            <p>Terreno: 180 m², Construcción: 220 m², 4 habitaciones, 4 baños, Estudio: No, Jardín: N/A, Cochera: 3, Materiales: Tabicón, Roof Garden: No.</p>
+            <div class="video-container">
+              <iframe width="100%" height="220" src="https://www.youtube.com/embed/cPMvGWVgrRk" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- MÓDULO DE VENTAS -->
+  <section class="modulo-ventas" id="modulo">
+    <h2>Visita nuestro Módulo de Ventas</h2>
+    <img src="modulo.png" alt="Módulo de Ventas" class="modulo-img">
+    <p>¡Te esperamos para que conozcas todos los modelos y resuelvas tus dudas en persona!</p>
+    <a href="https://www.google.com/maps/@20.586118,-100.4443151,3a,75y,172.47h,80.74t/data=!3m7!1e1!3m5!1spDM1bICS_HLdPzQQ7pAgQg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D9.260000000000005%26panoid%3DpDM1bICS_HLdPzQQ7pAgQg%26yaw%3D172.47!7i16384!8i8192!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-maps">Ver ubicación en Google Maps</a>
+  </section>
+  <!-- FORMULARIO DE CITA -->
+  <section class="cita-ventas" id="cita">
+    <h2>Agenda tu cita</h2>
+    <form class="form-cita" id="form-cita">
+      <div class="form-row">
+        <input type="text" name="nombre" id="nombre-cita" placeholder="Tu nombre" required>
+      </div>
+      <div class="form-row">
+        <input type="date" name="fecha" id="fecha-cita" required min="2024-01-01">
+        <select name="hora" id="hora-cita" required>
+          <option value="">Selecciona hora</option>
+          <option>08:00</option>
+          <option>09:00</option>
+          <option>10:00</option>
+          <option>11:00</option>
+          <option>12:00</option>
+          <option>13:00</option>
+          <option>14:00</option>
+          <option>15:00</option>
+          <option>16:00</option>
+          <option>17:00</option>
+          <option>18:00</option>
+        </select>
+      </div>
+      <a href="#" id="btn-whatsapp" class="btn-cita" target="_blank">Agendar cita por WhatsApp</a>
+    </form>
+  </section>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-contacto">
+      <strong>Habitat Santa Fe, Querétaro</strong> | WhatsApp: <a href="https://wa.me/5214425762737" style="color:#fff;text-decoration:underline;">+52 1 442 576 2737</a>
+    </div>
+    <div class="footer-redes">
+      <a href="https://www.facebook.com/Habitatsantafe" title="Facebook" target="_blank" class="footer-icon-link">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="#1877F3" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><circle cx="16" cy="16" r="16" fill="#1877F3"/><path d="M22.675 16.001h-3.197v10.667h-4.266V16.001h-2.133v-3.733h2.133v-2.4c0-2.133 1.28-3.307 3.253-3.307.94 0 1.92.168 1.92.168v2.106h-1.082c-1.066 0-1.4.663-1.4 1.34v2.093h2.38l-.381 3.733z" fill="#fff"/></svg>
+        <span style="margin-left:0.5em;">Facebook</span>
+      </a>
+      <a href="https://www.youtube.com/@habitatsantafe4791" title="YouTube" target="_blank" class="footer-icon-link">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><circle cx="16" cy="16" r="16" fill="#FF0000"/><path d="M22.545 13.634c-.2-.753-.792-1.345-1.545-1.545C19.818 12 16 12 16 12s-3.818 0-5 .089c-.753.2-1.345.792-1.545 1.545C9.364 14.818 9.364 16 9.364 16s0 1.182.091 2.366c.2.753.792 1.345 1.545 1.545C12.182 20 16 20 16 20s3.818 0 5-.089c.753-.2 1.345-.792 1.545-1.545.091-1.184.091-2.366.091-2.366s0-1.182-.091-2.366zM14.909 18.091v-4.182l3.636 2.091-3.636 2.091z" fill="#fff"/></svg>
+        <span style="margin-left:0.5em;">YouTube</span>
+      </a>
+    </div>
+    <div style="margin-top:1rem;font-size:0.95em;">&copy; 2024 Habitat Santa Fe, Querétaro. Todos los derechos reservados.</div>
+  </footer>
+  <!-- WhatsApp Floating Icon -->
+  <a href="https://wa.me/5214425762737?text=Hola%2C%20quiero%20informes%20sobre%20las%20casas%20en%20Habitat%20Santa%20Fe" class="whatsapp-float" target="_blank" title="¿Tienes dudas? ¡Escríbenos por WhatsApp!">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+  <script>
+    document.getElementById('btn-whatsapp').addEventListener('click', function(e) {
+      var nombre = document.getElementById('nombre-cita').value.trim();
+      var fecha = document.getElementById('fecha-cita').value;
+      var hora = document.getElementById('hora-cita').value;
+      if (!nombre || !fecha || !hora) {
+        alert('Por favor completa todos los campos.');
+        e.preventDefault();
+        return;
+      }
+      var mensaje = `Hola, quiero agendar una cita para visitar el módulo de ventas.\nNombre: ${nombre}\nFecha: ${fecha}\nHora: ${hora}`;
+      var url = `https://wa.me/5214425762737?text=${encodeURIComponent(mensaje)}`;
+      this.href = url;
+    });
+  </script>
+</body>
+</html> 

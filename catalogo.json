@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "nombre": "Commoran Balcón",
+    "precio": 2850000,
+    "descripcion": "Terreno: 180 m², Construcción: 153 m², 3 habitaciones, 3 baños, Estudio: No, Jardín: 54 m², Cochera: 3, Materiales: Tabiquería, Roof Garden: No.",
+    "imagen": "fachadas/Commoran_Balcon.jpg",
+    "pdf": "fachadas/Commoran_Balcon.pdf",
+    "youtube": "https://youtu.be/VXgAtYsGVpw"
+  },
+  {
+    "id": 2,
+    "nombre": "Preiser (sin Roof Garden)",
+    "precio": 3000000,
+    "descripcion": "Terreno: 180 m², Construcción: 165 m², 3 habitaciones, 2.5 baños, Estudio: No, Jardín: 35 m², Cochera: 3, Materiales: Tabiquería, Roof Garden: No.",
+    "imagen": "fachadas/Preiser_sin_Roof_Garden.jpg",
+    "pdf": "fachadas/Preiser_sin_Roof_Garden.pdf",
+    "youtube": "https://www.youtube.com/watch?v=K2xEG9GGapl"
+  },
+  {
+    "id": 3,
+    "nombre": "Preiser (con Roof Garden)",
+    "precio": 3320000,
+    "descripcion": "Terreno: 180 m², Construcción: 173.7 m², 3 habitaciones, 2.5 baños, Estudio: No, Jardín: 35 m², Cochera: 3, Materiales: Tabiquería, Roof Garden: Sí.",
+    "imagen": "fachadas/Preiser_con_Roof_Garden.jpg",
+    "pdf": "fachadas/Preiser_con_Roof_Garden.pdf",
+    "youtube": ""
+  },
+  {
+    "id": 4,
+    "nombre": "Hoatzin",
+    "precio": 3000000,
+    "descripcion": "Terreno: 162.5 m², Construcción: 166 m², 3 habitaciones, 3 baños, Estudio: No, Jardín: N/A, Cochera: 3, Materiales: Tabicón, Roof Garden: No.",
+    "imagen": "fachadas/Hoatzin.jpg",
+    "pdf": "fachadas/Hoatzin.pdf",
+    "youtube": ""
+  },
+  {
+    "id": 5,
+    "nombre": "Sastresillo",
+    "precio": 3200000,
+    "descripcion": "Terreno: 180 m², Construcción: 176 m², 3 habitaciones, 2 baños, Estudio: Sí, Jardín: N/A, Cochera: 3, Materiales: Tabiquería, Roof Garden: No.",
+    "imagen": "fachadas/Sastresillo.jpg",
+    "pdf": "fachadas/Sastresillo.pdf",
+    "youtube": "https://www.youtube.com/watch?v=8AtSU30dW4k"
+  },
+  {
+    "id": 6,
+    "nombre": "Condor",
+    "precio": 3200000,
+    "descripcion": "Terreno: 180 m², Construcción: 175 m², 3 habitaciones, 3 baños, Estudio: No, Jardín: N/A, Cochera: 3, Materiales: Tabiquería, Roof Garden: No.",
+    "imagen": "fachadas/Condor.jpg",
+    "pdf": "fachadas/Condor.pdf",
+    "youtube": "https://www.youtube.com/watch?v=LkPF-ZxKYRc"
+  },
+  {
+    "id": 7,
+    "nombre": "Chapan Gris",
+    "precio": 3200000,
+    "descripcion": "Terreno: 180 m², Construcción: 177 m², 3 habitaciones, 3 baños, Estudio: Sí, Jardín: 36 m², Cochera: 3, Materiales: Tabicón, Roof Garden: No.",
+    "imagen": "fachadas/Chapan_Gris.jpg",
+    "pdf": "fachadas/Chapan_Gris.pdf",
+    "youtube": "https://www.youtube.com/watch?v=nLOehFPs7BA"
+  },
+  {
+    "id": 8,
+    "nombre": "Medem",
+    "precio": 3200000,
+    "descripcion": "Terreno: 180 m², Construcción: 175 m², 3 habitaciones, 3 baños, Estudio: Sí, Jardín: N/A, Cochera: 3, Materiales: Tabiquería, Roof Garden: No.",
+    "imagen": "fachadas/Medem.jpg",
+    "pdf": "fachadas/Medem.pdf",
+    "youtube": ""
+  },
+  {
+    "id": 9,
+    "nombre": "Mixto (Vivienda y negocio)",
+    "precio": 3400000,
+    "descripcion": "Terreno: 180 m², Construcción: 180 m², 3 habitaciones, 3 baños, Estudio: Sí, Jardín: N/A, Cochera: 3, Materiales: Tabicón, Roof Garden: No.",
+    "imagen": "fachadas/Mixto_Vivienda_y_negocio.jpg",
+    "pdf": "fachadas/Mixto_Vivienda_y_negocio.pdf",
+    "youtube": "https://www.youtube.com/watch?v=XuHihkUqm7M"
+  },
+  {
+    "id": 10,
+    "nombre": "Sirisi",
+    "precio": 2850000,
+    "descripcion": "Terreno: 180 m², Construcción: 140 m², 3 habitaciones, 2.5 baños, Estudio: No, Jardín: 36 m², Cochera: 3, Materiales: Tabiquería, Roof Garden: No.",
+    "imagen": "fachadas/Sirisi.jpg",
+    "pdf": "fachadas/Sirisi.pdf",
+    "youtube": "https://youtu.be/tLc7tEpmizM"
+  },
+  {
+    "id": 11,
+    "nombre": "Sirisi con Excedente",
+    "precio": 3050000,
+    "descripcion": "Terreno: 225 m², Construcción: 153 m², 3 habitaciones, 2.5 baños, Estudio: No, Jardín: 36 m², Cochera: 3, Materiales: Tabiquería, Roof Garden: No.",
+    "imagen": "fachadas/Sirisi_con_Excedente.jpg",
+    "pdf": "fachadas/Sirisi_con_Excedente.pdf",
+    "youtube": "https://www.youtube.com/watch?v=yyy73tbgJ2E"
+  },
+  {
+    "id": 12,
+    "nombre": "Condor Gris",
+    "precio": 3995000,
+    "descripcion": "Terreno: 225 m², Construcción: 180 m², 4 habitaciones, 4 baños, Estudio: No, Jardín: N/A, Cochera: 3, Materiales: Tabicón, Roof Garden: No.",
+    "imagen": "fachadas/Condor_Gris.jpg",
+    "pdf": "fachadas/Condor_Gris.pdf",
+    "youtube": "https://www.youtube.com/watch?v=UPMa5LZUnaA"
+  },
+  {
+    "id": 13,
+    "nombre": "Sastresillo con Excedente",
+    "precio": 3655000,
+    "descripcion": "Terreno: 252 m², Construcción: 180 m², 3 habitaciones, 4 baños, Estudio: No, Jardín: 80 m², Cochera: 3, Materiales: Tabiquería, Roof Garden: No.",
+    "imagen": "fachadas/Sastresillo_con_Excedente.jpg",
+    "pdf": "fachadas/Sastresillo_con_Excedente.pdf",
+    "youtube": ""
+  },
+  {
+    "id": 14,
+    "nombre": "Chapan Beige",
+    "precio": 3850000,
+    "descripcion": "Terreno: 180 m², Construcción: 220 m², 4 habitaciones, 4 baños, Estudio: No, Jardín: N/A, Cochera: 3, Materiales: Tabicón, Roof Garden: No.",
+    "imagen": "fachadas/Chapan_Beige.jpg",
+    "pdf": "fachadas/Chapan_Beige.pdf",
+    "youtube": "https://youtu.be/cPMvGWVgrRk"
+  }
+] 
